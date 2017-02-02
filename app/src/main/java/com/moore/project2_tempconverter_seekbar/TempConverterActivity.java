@@ -71,11 +71,7 @@ public class TempConverterActivity extends AppCompatActivity
             fahrenheit = Float.parseFloat(fahrenheitString);
         }
 
-        if(fahrenheit==0){
-            celciusTemp = 0;
-        }else {
-            celciusTemp = (fahrenheit - 32) * 5 / 9;
-        }
+        celciusTemp = (fahrenheit - 32) * 5 / 9;
 
         if(celciusTemp < 0){
             celciusTV.setTextColor(Color.BLUE);
