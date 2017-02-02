@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_temp_converter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.moore.project2_tempconverter_seekbar.TempConverterActivity">
+
+        <TextView
+            android:text="@string/degreesLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/degreesLBL"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:text="@string/fahrenheitLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/degreesLBL"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/fahrenheitLbl"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fahrenheitLbl"
+            android:id="@+id/fahrenheitTV"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/celciusTV"
+            android:textAlignment="textEnd" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:id="@+id/fahrenheitSeekBar"
+            android:progress="50"
+            android:max="350"
+            android:progressTint="@android:color/black"
+            android:thumb="@android:color/black"
+            android:layout_below="@+id/fahrenheitTV"
+            android:layout_alignStart="@+id/fahrenheitLbl"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/celciusTV" />
+
+        <TextView
+            android:text="@string/celciusLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fahrenheitLbl"
+            android:layout_alignStart="@+id/fahrenheitLbl"
+            android:layout_marginTop="26dp"
+            android:id="@+id/celciusLbl"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/celciusLbl"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/celciusTV"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:width="250px"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:text="@string/resetLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/resetButton"
+            android:textSize="20sp"
+            android:layout_below="@+id/celciusTV"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>
